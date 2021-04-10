@@ -1,0 +1,23 @@
+<div class="magic-number-wrapper">
+  <form [formGroup]="magicalForm">
+    <p>Please Enter the Magic Number : </p>
+      Range 1 : 
+      <input type="text" formControlName="range1" >
+      Range 2 : 
+      <input type="text" formControlName="range2">
+
+
+      Magic Numbers : 
+      <input type="text" name="" id="" formControlName="magicalNumber"><br><br>
+
+
+      <button (click)="populateArrays()">Populate Magic Numbers</button><br><br>
+
+  </form>
+  <div class="result" *ngIf="magicalArrayList.length">
+      The magical numbers in the range are
+      <div *ngFor="let item of magicalArrayList;let i = index">
+       {{i+1 + '.'}} {{item}}
+      </div>
+  </div>
+</div>
